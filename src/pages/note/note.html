@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Note
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="noteForm"
+        (ngSubmit)="submit()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Text</ion-label>
+        <ion-textarea formControlName="text"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+    <div padding>
+      <button [disabled]="!noteForm.valid" ion-button full>Submit</button>
+    </div>
+  </form>
+</ion-content>
